@@ -12,7 +12,7 @@ public class Nav extends Actor
     private int timeShot;
     private Nav(){
         GreenfootImage image = getImage();
-            image.scale(image.getWidth()/7, image.getHeight()/7);
+            image.scale(image.getWidth(), image.getHeight());
             setImage(image);
             this.timeShot = 0;
     }

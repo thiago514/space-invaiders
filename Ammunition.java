@@ -9,12 +9,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Ammunition extends Actor
 {
     public Ammunition(){
+        GreenfootImage image = getImage();
+        image.scale(image.getWidth(), image.getHeight()/5);
+        setImage(image);
         turn(-90);
     }
 
     public void act()
     {
-        if(getX() >= 600 || getY() >= 400 || getX() <= 0 || getY() <= 0){
+        if(getY() <= 0){
             getWorld().removeObject(this);
         }
         
