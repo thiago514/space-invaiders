@@ -1,6 +1,6 @@
 #Greenfoot project file
 class.Ammunition.image=tile071.png
-class.Enemy.image=kindpng_1784687.png
+class.Enemy.image=tile001.png
 class.Nav.image=tile024.png
 class.background.image=rivets.jpg
 dependency1.from=background
@@ -9,10 +9,10 @@ dependency1.type=UsesDependency
 dependency2.from=Nav
 dependency2.to=Ammunition
 dependency2.type=UsesDependency
-editor.fx.0.height=1008
-editor.fx.0.width=2544
-editor.fx.0.x=8
-editor.fx.0.y=64
+editor.fx.0.height=884
+editor.fx.0.width=708
+editor.fx.0.x=2568
+editor.fx.0.y=8
 height=1008
 package.numDependencies=2
 package.numTargets=4

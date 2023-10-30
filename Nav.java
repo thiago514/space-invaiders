@@ -39,7 +39,7 @@ public class Nav extends Actor
         
         if(Greenfoot.isKeyDown("space") && timeShot <= 0){
             getWorld().addObject(new Ammunition(), getX(), (getY() - (getImage().getWidth()/2)));
-            timeShot=100;
+            timeShot=5;
         }
         
         timeShot--;

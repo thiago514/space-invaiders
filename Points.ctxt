@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Points
+comment0.text=\n\ Write\ a\ description\ of\ class\ Points\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Points()
+comment2.params=
+comment2.target=Points\ getInstance()
+comment3.params=
+comment3.target=void\ atualizarImagem()
+comment4.params=valor
+comment4.target=void\ adicionarPontos(int)
+comment5.params=
+comment5.target=int\ getPontos()
+numComments=6
