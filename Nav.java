@@ -44,6 +44,9 @@ public class Nav extends Actor
         
         timeShot--;
         
+        if(isTouching(Enemy.class)){
+            getWorld().removeObject(this);
+        }
         
     }
 }

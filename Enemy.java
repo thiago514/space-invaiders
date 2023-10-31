@@ -1,4 +1,5 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
+  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 
 /**
@@ -15,9 +16,10 @@ public class Enemy extends Actor
      */
     public static boolean parede = false;
     
-    public static int velocidade = 3;
+    public int velocidade = 3;
     
     public static int inimigosMortos = 0;
+    
     
     
     public Enemy(){
@@ -26,7 +28,7 @@ public class Enemy extends Actor
             setImage(image);
 
     }
-    public void act()
+    public synchronized void act()
     {
 
         if(getImage().toString().contains("tile001.png")){
@@ -40,23 +42,37 @@ public class Enemy extends Actor
 
         }
         
+        
 
         
-        /*
+        
         if(getX() <= 0 || getX() >= 599){
-            parede = true;
+            bateuParede();
         }
         
-
         
         if(parede){
-            turn(90);
-            move(3);
-            turn(-90);
-            velocidade *= -1;
-            parede = false;
+            bateuParede();
         }
-        move(velocidade);*/
+        move(velocidade);
         
+    }
+    
+    public void setParede(){
+        parede = true;
+    }
+    
+    public synchronized void bateuParede(){
+        turn(90);
+        move(Math.abs(velocidade*4));
+        turn(-90);
+        velocidade *= -1;
+        parede = false;
+        if(inimigosMortos > 0){
+            velocidade *= 1 + (inimigosMortos/10);
+            if(inimigosMortos > 10){
+                velocidade *= inimigosMortos;
+            }
+        }
     }
 }

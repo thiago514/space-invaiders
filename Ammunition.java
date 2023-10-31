@@ -16,7 +16,7 @@ public class Ammunition extends Actor
         turn(-90);
     }
 
-    public void act()
+    public void  act()
     {
         if(getY() <= 0){
             getWorld().removeObject(this);
