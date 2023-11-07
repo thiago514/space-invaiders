@@ -11,7 +11,7 @@ public class Points extends Actor
     private int pontos = 0; // Variável para armazenar os pontos
 
     private static Points points;
-    private Points() {
+    public Points() {
         atualizarImagem();
     }
     
@@ -22,6 +22,13 @@ public class Points extends Actor
         return points;
         
     }
+    public void act(){
+        if(getWorld().getObjects(Enemy.class).size() == 21){
+            pontos = 0;
+            atualizarImagem();
+        }
+    }
+    
 
     // Método para atualizar a imagem do placar
     private void atualizarImagem() {
@@ -39,4 +46,5 @@ public class Points extends Actor
     public int getPontos() {
         return pontos;
     }
+    
 }

@@ -16,9 +16,8 @@ public class Enemy extends Actor
      */
     public static boolean parede = false;
     
-    public int velocidade = 3;
+    public static int velocidade = 3;
     
-    public static int inimigosMortos = 0;
     
     
     
@@ -43,36 +42,35 @@ public class Enemy extends Actor
         }
         
         
-
-        
-        
-        if(getX() <= 0 || getX() >= 599){
-            bateuParede();
-        }
-        
-        
-        if(parede){
-            bateuParede();
+        if(getX() <= 20 || getX() >= 580){
+            ((Background)getWorld()).parede();
         }
         move(velocidade);
         
-    }
-    
-    public void setParede(){
-        parede = true;
     }
     
     public synchronized void bateuParede(){
         turn(90);
         move(Math.abs(velocidade*4));
         turn(-90);
-        velocidade *= -1;
-        parede = false;
-        if(inimigosMortos > 0){
-            velocidade *= 1 + (inimigosMortos/10);
-            if(inimigosMortos > 10){
-                velocidade *= inimigosMortos;
-            }
+        move(velocidade*2);
+    }
+    
+    public static synchronized void alteracaoGameEnemy(){
+        if(velocidade > 0){
+            if(Points.getInstance().getPontos() < 50){
+                velocidade = 2;
+            };
+            if(Points.getInstance().getPontos() > 50){
+                velocidade = 4;
+            };
+            if(Points.getInstance().getPontos() > 150){
+                velocidade = 6;
+            };
+            
+            System.out.println(velocidade);
         }
+        velocidade *= -1; 
+        
     }
 }

@@ -18,18 +18,23 @@ public class Ammunition extends Actor
 
     public void  act()
     {
-        if(getY() <= 0){
-            getWorld().removeObject(this);
-        }
+        
         
         if(isTouching(Enemy.class)){
             Enemy enemy = (Enemy) getOneIntersectingObject(Enemy.class);
             getWorld().removeObject(enemy);
             getWorld().removeObject(this);
             Points.getInstance().adicionarPontos(10);
-            
+            return;
+        }
+        
+        if(getY() <= 0){
+            getWorld().removeObject(this);
+            return;
         }
         
         move(3);
+        
+        
     }
 }

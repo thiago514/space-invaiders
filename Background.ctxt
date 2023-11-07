@@ -1,8 +1,12 @@
 #BlueJ class context
-comment0.target=background
+comment0.target=Background
 comment0.text=\n\ Write\ a\ description\ of\ class\ background\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
-comment1.target=background()
+comment1.target=Background()
 comment2.params=
-comment2.target=void\ parede()
-numComments=3
+comment2.target=void\ gameOver()
+comment3.params=
+comment3.target=void\ vencedor()
+comment4.params=
+comment4.target=void\ parede()
+numComments=5

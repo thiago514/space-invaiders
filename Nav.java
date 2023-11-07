@@ -44,8 +44,16 @@ public class Nav extends Actor
         
         timeShot--;
         
+
+        
         if(isTouching(Enemy.class)){
+            ((Background)getWorld()).gameOver();
             getWorld().removeObject(this);
+            return;
+        }
+        
+        if(getWorld().getObjects(Enemy.class).isEmpty()){
+                ((Background)getWorld()).vencedor();
         }
         
     }

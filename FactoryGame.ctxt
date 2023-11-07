@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=FactoryGame
+comment0.text=\n\ Write\ a\ description\ of\ class\ FactoryGame\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=java.util.List\ getEnemys()
+comment2.params=
+comment2.target=greenfoot.Actor\ getNav()
+numComments=3

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=BaseGame
+comment0.text=\n\ Write\ a\ description\ of\ class\ BaseGame\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=BaseGame()
+comment2.params=
+comment2.target=greenfoot.Actor\ getNav()
+comment3.params=
+comment3.target=java.util.List\ getEnemys()
+numComments=4
