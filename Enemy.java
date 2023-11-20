@@ -23,7 +23,7 @@ public class Enemy extends Actor
     
     public Enemy(){
         GreenfootImage image = getImage();
-            image.scale(image.getWidth()/ 2, image.getHeight()/2);
+            //image.scale(image.getWidth()/ 2, image.getHeight()/2);
             setImage(image);
 
     }
@@ -32,11 +32,11 @@ public class Enemy extends Actor
 
         if(getImage().toString().contains("tile001.png")){
             GreenfootImage image = new GreenfootImage("tile002.png");
-            image.scale(image.getWidth()/ 2, image.getHeight()/2);
+            //image.scale(image.getWidth()/ 2, image.getHeight()/2);
             setImage(image);
         }else{
             GreenfootImage image = new GreenfootImage("tile001.png");
-            image.scale(image.getWidth()/ 2, image.getHeight()/2);
+            //image.scale(image.getWidth()/ 2, image.getHeight()/2);
             setImage(image);
 
         }

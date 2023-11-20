@@ -15,7 +15,7 @@ public class Background extends World
     
     public Background()
     {    
-        super(600, 400, 1);
+        super(1200, 800, 1);
         FactoryGame game = new BaseGame();
         this.addObject(game.getNav(), 300, 380);
         int nEnemy = 0;
