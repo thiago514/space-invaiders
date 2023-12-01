@@ -37,7 +37,7 @@ public class Nav extends Actor
         }
         
         if(Greenfoot.isKeyDown("space") && timeShot <= 0){
-            getWorld().addObject(new Ammunition(), getX(), (getY() - (getImage().getWidth()/2)));
+            getWorld().addObject(new Ammunition(this), getX(), (getY() + 2));
             timeShot=5;
         }
         
@@ -45,11 +45,11 @@ public class Nav extends Actor
         
 
         
-        if(isTouching(Enemy.class)){
+        /*if(isTouching(Enemy.class) || isTouching(Ammunition.class)){
             ((Background)getWorld()).gameOver();
             getWorld().removeObject(this);
             return;
-        }
+        }*/
         
         if(getWorld().getObjects(Enemy.class).isEmpty()){
                 ((Background)getWorld()).vencedor();

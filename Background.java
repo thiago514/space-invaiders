@@ -17,14 +17,14 @@ public class Background extends World
     {    
         super(1200, 800, 1);
         FactoryGame game = new BaseGame();
-        this.addObject(game.getNav(), 300, 380);
+        this.addObject(game.getNav(), 600, 750);
         int nEnemy = 0;
         enemy = game.getEnemys();
         for(int i = 1; i <= 3; i++){
             for(int n = 1; n<=7; n++){
                 //Enemy e = new Enemy();
                 //enemy.add(e);
-                this.addObject(game.getEnemys().get(nEnemy), n*70, i*60);
+                this.addObject(game.getEnemys().get(nEnemy), n*150, i*100);
                 nEnemy++;
             }
             nEnemy++;
@@ -34,24 +34,32 @@ public class Background extends World
     }
     
     public void gameOver(){
+        System.out.println("Game over");
         this.removeObjects(this.getObjects(Enemy.class));
         this.removeObjects(this.getObjects(Points.class));
         if(this.getObjects(Ammunition.class) != null){
             this.removeObjects(this.getObjects(Ammunition.class));    
         }
+        /**if(this.getObjects(AmmunitionEnemy.class) != null){
+            this.removeObjects(this.getObjects(AmmunitionEnemy.class));    
+        } */
         GreenfootImage background = new GreenfootImage("game-over.png");
-        background.scale(600, 400);
+        background.scale(1100, 700);
         getBackground().drawImage(background, 0, 0);
     }
     
     public void vencedor(){
+        System.out.println("Vencedor");
         this.removeObjects(this.getObjects(Nav.class));
         this.removeObjects(this.getObjects(Points.class));
         if(this.getObjects(Ammunition.class) != null){
             this.removeObjects(this.getObjects(Ammunition.class));    
         }
+         /**if(this.getObjects(AmmunitionEnemy.class) != null){
+            this.removeObjects(this.getObjects(AmmunitionEnemy.class));    
+        } */
         GreenfootImage background = new GreenfootImage("vencedor.jpeg");
-        background.scale(600, 400);
+        background.scale(1200, 800);
         getBackground().drawImage(background, 0, 0);
     }
     

@@ -18,6 +18,8 @@ public class Enemy extends Actor
     
     public static int velocidade = 3;
     
+    public static int tiro = 1000;
+    
     
     
     
@@ -42,10 +44,11 @@ public class Enemy extends Actor
         }
         
         
-        if(getX() <= 20 || getX() >= 580){
+        if(getX() <= 20 || getX() >= 1180){
             ((Background)getWorld()).parede();
         }
         move(velocidade);
+        shot();
         
     }
     
@@ -54,6 +57,14 @@ public class Enemy extends Actor
         move(Math.abs(velocidade*4));
         turn(-90);
         move(velocidade*2);
+    }
+    
+    public synchronized void shot(){
+        if(tiro <= 0){
+            getWorld().addObject(new Ammunition(this), getX(), (getY() - (getImage().getWidth()/2)));
+            tiro=1000;
+        }
+        tiro -= Math.abs(velocidade);
     }
     
     public static synchronized void alteracaoGameEnemy(){
