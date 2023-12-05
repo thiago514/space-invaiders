@@ -72,14 +72,13 @@ public class Enemy extends Actor
             if(Points.getInstance().getPontos() < 50){
                 velocidade = 2;
             };
-            if(Points.getInstance().getPontos() > 50){
+            if(Points.getInstance().getPontos() > 100){
                 velocidade = 4;
             };
             if(Points.getInstance().getPontos() > 150){
                 velocidade = 6;
             };
             
-            System.out.println(velocidade);
         }
         velocidade *= -1; 
         

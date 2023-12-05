@@ -30,41 +30,32 @@ public class Background extends World
             nEnemy++;
         
         }
-        this.addObject(Points.getInstance(), 500, 20);
+        this.addObject(Points.getInstance(), 1100, 20);
     }
     
     public void gameOver(){
-        System.out.println("Game over");
         this.removeObjects(this.getObjects(Enemy.class));
         this.removeObjects(this.getObjects(Points.class));
         if(this.getObjects(Ammunition.class) != null){
             this.removeObjects(this.getObjects(Ammunition.class));    
         }
-        /**if(this.getObjects(AmmunitionEnemy.class) != null){
-            this.removeObjects(this.getObjects(AmmunitionEnemy.class));    
-        } */
         GreenfootImage background = new GreenfootImage("game-over.png");
         background.scale(1100, 700);
         getBackground().drawImage(background, 0, 0);
     }
     
     public void vencedor(){
-        System.out.println("Vencedor");
         this.removeObjects(this.getObjects(Nav.class));
         this.removeObjects(this.getObjects(Points.class));
         if(this.getObjects(Ammunition.class) != null){
             this.removeObjects(this.getObjects(Ammunition.class));    
         }
-         /**if(this.getObjects(AmmunitionEnemy.class) != null){
-            this.removeObjects(this.getObjects(AmmunitionEnemy.class));    
-        } */
         GreenfootImage background = new GreenfootImage("vencedor.jpeg");
         background.scale(1200, 800);
         getBackground().drawImage(background, 0, 0);
     }
     
     public void parede(){
-        System.out.println("Bateu na Parede");
         Enemy.alteracaoGameEnemy();
         enemy.forEach((e) -> {
                ((Enemy)e).bateuParede();
